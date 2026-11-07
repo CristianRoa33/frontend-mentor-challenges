@@ -18,4 +18,3 @@ La página principal (`index.html`) genera la galería con JavaScript a partir d
 ## 📈 Historial de mejoras
 
 - **v1.0**: Unificación de 12 retos en un solo repositorio con galería
-     Colección de retos de Frontend Mentor: maquetación con HTML y CSS a partir de diseños reales.
