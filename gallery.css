@@ -1,0 +1,80 @@
+:root {
+  --verde: #1db954;
+  --negro: #121212;
+  --tarjeta: #1e1e1e;
+  --texto: #e5e5e5;
+  --gris: #a3a3a3;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--negro);
+  color: var(--texto);
+  min-height: 100vh;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 1.5rem 2rem;
+}
+
+.hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); }
+.hero h1 span { color: var(--verde); }
+.hero p { color: var(--gris); margin-top: 0.8rem; }
+.contador span { color: var(--verde); font-weight: bold; }
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.card {
+  background: var(--tarjeta);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(29, 185, 84, 0.25);
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+  background: #2a2a2a;
+}
+
+.card-body { padding: 1rem 1.2rem 1.3rem; }
+.card-body h2 { font-size: 1.1rem; margin-bottom: 1rem; }
+
+.botones { display: flex; gap: 0.6rem; }
+
+.botones a {
+  flex: 1;
+  text-align: center;
+  padding: 0.55rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.btn-demo { background: var(--verde); color: var(--negro); }
+.btn-codigo { border: 1px solid var(--verde); color: var(--verde); }
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--gris);
+}
+.footer a { color: var(--verde); }

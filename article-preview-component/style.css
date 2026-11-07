@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+    --font-family-base: "Manrope" , sans-serif ;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    background-color: var(--Light-Grayish-Blue);
+}
+
+article {
+    width: 20.5rem;
+    height: 32rem;
+    border-radius: 8px;
+    background-color: #ffff;
+}
+
+img {
+    width: 20.5rem;
+    height: 12.5rem;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0 ;
+}
+
+h1 {
+    font-size: 1rem;
+    font-family: var(--font-family-base);
+    margin: 41px 32px 21px 32px;
+    font-weight: 700;
+    line-height: 22px;
+    color: var(--Very-Dark-Grayish-Blue);
+}
+
+.text {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--Desaturated-Dark-Blue);
+    font-family: var(--font-family-base);
+    margin: 0px 35px 15px 35px;
+}
+
+.information {
+    margin: 20px 13px 20px 13px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.adition {
+    display: flex;
+    justify-content: space-between;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+    align-items: start;
+    margin: 0px 16px;
+}
+
+.avatar {
+    width: 2.4375rem;
+    height: 2.4375rem;
+    border-radius: 50%;
+}
+
+.name {
+    font-size: 0.8125rem;
+    font-family: var(--font-family-base);
+    color: var(--Very-Dark-Grayish-Blue);
+    margin: 1px ;
+}
+
+.date{
+    font-size: 0.8125rem;
+    font-family: var(--font-family-base);
+    color: var(--Grayish-Blue);
+    margin: 2px 0;
+}
+
+.share {
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--Light-Grayish-Blue);
+    border-radius: 50%;
+    background-image: url(images/icon-share.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.hidden {
+    display: none;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center; 
+    margin: 15px;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
+
+/* ----------------responsive -----------------*/
+
+@media (768px <= width <= 1024px) {
+
+    article {
+        display: flex;
+        width: 40rem;
+        height: 17.5625rem;
+    }
+
+
+    .control {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img {
+    width: 15.628rem;
+    height: 17.5625rem;
+    object-fit: cover;
+    border-radius: 8px 0 0 8px ;
+    }
+
+    h1 {
+    font-size: 1.125rem;
+    font-family: var(--font-family-base);
+    margin: 41px 50px 21px 32px;
+    font-weight: 700;
+    line-height: 25px;
+    color: var(--Very-Dark-Grayish-Blue);
+    }
+
+    .text {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--Desaturated-Dark-Blue);
+    font-family: var(--font-family-base);
+    margin: 0px 39px 2px 35px;
+    }
+
+    .adition {
+    display: flex;
+    justify-content: space-between;
+    }
+
+    .information {
+    display: flex;
+    justify-content: space-between;
+    width: 20.3125rem;
+    height: 2.875rem;
+    margin-bottom: 35px;
+    }
+}
+
+@media (1025px <= width <= 1440px){
+    
+    article {
+        display: flex;
+        width: 45.625rem;
+        height: 17.5625rem;
+    }
+
+    .control {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img {
+    width: 17.875rem;
+    height: 17.5625rem;
+    object-fit: cover;
+    border-radius: 8px 0 0 8px ;
+    }
+
+    h1 {
+    font-size: 1.375rem;
+    font-family: var(--font-family-base);
+    margin: 41px 32px 21px 32px;
+    font-weight: 700;
+    line-height: 30px;
+    color: var(--Very-Dark-Grayish-Blue);
+    }
+
+    .text {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--Desaturated-Dark-Blue);
+    font-family: var(--font-family-base);
+    margin: 0px 35px 2px 35px;
+    }
+
+    .adition {
+    display: flex;
+    justify-content: space-between;
+    }
+
+    .information {
+    display: flex;
+    justify-content: space-between;
+    width: 23.875rem;
+    height: 2.875rem;
+    margin-bottom: 35px;
+    }
+}

@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+--Red:hsl(0, 78%, 62%);
+--Cyan: hsl(180, 62%, 55%);
+--Orange: hsl(34, 97%, 64%);
+--Blue: hsl(212, 86%, 64%);
+--Grey-500: hsl(234, 12%, 34%);
+--Grey-400: hsl(212, 6%, 44%);
+--White: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(--White);
+    font-family: 'Poppins', sans-serif;
+}
+
+
+header { 
+    text-align: center;
+    margin: 63px 40px;
+}
+
+header h1 {
+    font-weight: 600;
+    font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+    color: var(--Grey-500);
+}
+
+header h2 {
+    font-weight: 200;
+    font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+    color:var(--Grey-400);
+}
+
+header p {
+    font-size:clamp(0.9375rem, 1% , 1rem);
+    font-weight: 400;
+    color: var(--Grey-400);
+    line-height: 25px;
+    margin: 11px 0 0 0; 
+}
+
+main {
+    margin: 1px 40px 0px 40px;
+    display: grid;
+    gap: 32px;
+}
+
+article {
+    min-width: 300px;
+    max-width: 352px;
+    height: 248px;
+    border: 2px transparent var(--Grey-400);
+    border-radius: 8px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.10);
+    padding: 30px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    " h3 h3"
+    "p p"
+    "imagen imagen";
+}
+
+article h3 {
+    grid-area: h3 ;
+    text-align: left;
+    color: var(--Grey-500);
+    font-weight: 600;
+}
+
+article p {
+    grid-area: p ;
+    color: var(--Grey-400);
+    font-size:clamp(0.75rem, 0.9vw , 0.9rem);
+    text-align: left;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.imagen {
+    grid-area: imagen;
+    justify-self:end;
+}
+
+
+.supervisor {
+    border-top: 4px solid var(--Cyan);
+}
+
+.team {
+    border-top: 4px solid var(--Red);
+}
+
+.karma {
+    border-top: 4px solid var(--Orange);
+}
+
+.calculator {
+    border-top: 4px solid var(--Blue);
+}
+
+
+footer {
+    margin: 45px 40px 0px 40px ;
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* ------ media querys ------*/
+
+@media ( 600px <= width <= 1024px ) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header p {
+        max-inline-size: 55ch;
+        margin: 10px auto;
+    }
+
+    main {
+       display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(clamp(300px, 25vw , 352px), 1fr));
+        max-width: 800px;
+        gap: 20px;
+    }
+
+}
+
+@media ( width >= 1440px ) {
+
+    body {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    header {
+        margin-top: 113px;
+    }
+    header p {
+        max-inline-size: 55ch;
+        margin: 10px auto;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr );
+        grid-template-rows: auto auto;
+        gap: 32px;
+        margin: auto;
+    }
+
+
+    
+
+    .team {
+        order: 2; 
+        grid-column: 2 / 3;
+    }
+
+    .supervisor {
+        order:1;
+        position: relative;
+        top: 135px;
+    }
+
+    .calculator {
+        order:3;
+        position: relative;
+        top: 135px;
+    }
+
+    .karma {
+        order:4;
+        grid-column: 2/3;
+    }
+    
+
+}

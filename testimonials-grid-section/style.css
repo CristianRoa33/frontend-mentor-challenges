@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Purple-50:hsl(260, 100%, 95%);
+    --Purple-300: hsl(264, 82%, 80%);
+    --Purple-500: hsl(263, 55%, 52%);
+    --White: hsl(0, 0%, 100%);
+    --Grey-100: hsl(214, 17%, 92%);
+    --Grey-200: hsl(0, 0%, 81%);
+    --Grey-400: hsl(224, 10%, 45%);
+    --Grey-500: hsl(217, 19%, 35%);
+    --Dark-blue: hsl(219, 29%, 14%);
+    --Black: hsl(0, 0%, 7%);
+}
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    min-height: 100dvh;
+    background-color: var(--Grey-100);
+}
+
+main{
+    margin: 73px 35px 73px 35px;
+    display: grid;
+    grid-template-areas: 
+    "Clifford"
+    "Walters"
+    "Harmon"
+    "Abrams"
+    "Whittle";
+    gap: 2rem;
+}
+
+article { 
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 34px 34px 34px 34px;
+}
+
+
+header {
+    display: flex;
+    gap: 15px;
+}
+
+.avatar {
+    border-radius:50%;
+    width: 30px;
+    height: 30px;
+}
+
+.name {
+    font-size: 0.9375rem;
+    font-weight: 500;
+}
+
+.status {
+    font-size: 0.8125rem;
+    font-weight: 400;
+}
+
+.Clifford {
+    grid-area: Clifford;
+    background-color: var(--Purple-500);
+    width: 19.07rem;
+    max-width: 33.75rem;
+    height: 28.125rem;
+    color: var(--Purple-50);
+}
+
+.Daniel {
+    border: 2px solid var(--Purple-300);
+}
+
+.Clifford h1 {
+    font-size: 1.25rem;
+    margin: 11px 0 21px 0;
+    font-weight: 600;
+}
+
+.Clifford p {
+    font-size: 0.82rem;
+}
+
+.Walters {
+    grid-area: Walters;
+    background-color: var(--Grey-500);
+    width: 19.0625rem;
+    height: 15.375rem;
+    color: var(--Grey-200);
+}
+
+.Walters .name {
+    color: var(--Grey-100);
+}
+
+.Walters .status {
+    color: var(--Grey-200);
+}
+
+.Walters h1 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin: 15px 0 21px 0;
+    color: var(--Grey-100);
+}
+
+.Walters p {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.Harmon {
+    grid-area: Harmon;
+    background-color: var(--White);
+    width: 305px;
+    height: 227px;
+    color: var(--Grey-500);
+}
+
+
+
+.Harmon h1 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 15px 0 15px 0;
+}
+
+.Harmon p {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.Abrams {
+    grid-area: Abrams;
+    background-color: var(--Dark-blue);
+    width: 305px;
+    height: 414px;
+    color: var(--White);
+}
+
+
+.Abrams h1 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 18px 0 10px 0;
+}
+
+.Abrams p {
+    font-size: 13px;
+}
+
+.Whittle {
+    grid-area: Whittle;
+    background-color: var(--White);
+    width: 305px;
+    height: 503px;
+    color: var(--Grey-400);
+}
+
+.Whittle h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 18px 0 21px 0;
+    color: var(--Grey-500);
+}
+
+.Whittle p {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/*-------1440px-------*/
+
+
+@media ( min-width: 1440px) {
+    body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    align-items: center;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(4 ,minmax(20rem));
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "Clifford Clifford Walters Whittle"
+        "Harmon    Abrams  Abrams  Whittle";
+        width: 69.625rem;
+        height: 36.44rem;
+    }
+
+    .Clifford {
+        grid-area: Clifford ;
+        width: 33.75rem;
+        height: 18rem;
+        background-image: url(images/bg-pattern-quotation.svg);
+        background-repeat: no-repeat ;
+        background-position: 87% 0%;
+    }
+
+    .Walters {
+        grid-area: Walters;
+        width: 16rem;
+        height: 18rem;
+    }
+    .Harmon {
+        grid-area: Harmon;
+        width: 16rem;
+        height: 271px;
+    }
+
+    .Abrams {
+        grid-area: Abrams ;
+        width: 33.75rem;
+        height: 16.94rem;
+    }
+
+    .Whittle {
+        grid-area: Whittle;
+        width: 16rem;
+        height: 36.875rem;
+    }
+
+    .Whittle p {
+        font-size: 13.5px;
+        font-weight: 500;
+    }
+}
+
+
+
+.attribution {
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}

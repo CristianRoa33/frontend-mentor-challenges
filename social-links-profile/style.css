@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+:root {
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey-700: hsl(0, 0%, 20%);
+    --grey-800: hsl(0, 0%, 12%);
+    --grey-900: hsl(0, 0%, 8%);
+}
+
+body {
+    background-color: var(--grey-900);
+    font-family: 'Inter', sans-serif;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    height: 100vh;
+}
+
+.card_container {
+    background-color: var(--grey-800);
+    border-radius: 15px;
+    padding: 1.875rem;
+    width: 24rem;
+    height: 36rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+img {
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    margin: 1.5rem ;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--green);
+    margin-bottom: 1.5rem;
+}
+
+p {
+    font-size: 0.875rem;
+    margin-bottom: 1.8rem;
+    color: var(--white);
+}
+
+.buttons_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+button {
+    background-color: var(--grey-700);
+    border: none;
+    border-radius: 5px;
+    width: 19rem;
+    height: 40px;
+}
+
+button:hover {
+    background-color: var(--grey-800);
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover a {
+    color: var(--green);
+}
+
+a { 
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 600;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* Mobile Responsive */
+@media (max-width: 425px){
+    .card_container {
+        width: 20rem;
+        height: 36rem;
+    }
+
+    button {
+        width: 16rem;
+    }
+}
