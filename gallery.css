@@ -78,3 +78,16 @@ body {
   color: var(--gris);
 }
 .footer a { color: var(--verde); }
+
+
+.sin-preview {
+  aspect-ratio: 16 / 10;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #1db954, #121212);
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 1rem;
+}

@@ -1,16 +1,16 @@
 const retos = [
-  "qr-code-component",
-  "blog-preview-card",
-  "social-links-profile",
-  "recipe-page",
-  "product-preview-card-component",
-  "four-card-feature-section",
-  "social-proof-section",
-  "testimonials-grid-section",
-  "article-preview-component",
-  "faq-accordion",
-  "base-apparel-coming-soon",
-  "beginner-html-site-styled",
+  { carpeta: "qr-code-component" },
+  { carpeta: "blog-preview-card" },
+  { carpeta: "social-links-profile" },
+  { carpeta: "recipe-page" },
+  { carpeta: "product-preview-card-component", preview: "design/desktop-preview.jpg" },
+  { carpeta: "four-card-feature-section", preview: "design/desktop-preview.jpg" },
+  { carpeta: "social-proof-section", preview: "design/desktop-preview.jpg" },
+  { carpeta: "testimonials-grid-section" },
+  { carpeta: "article-preview-component", preview: "design/desktop-preview.jpg" },
+  { carpeta: "faq-accordion" },
+  { carpeta: "base-apparel-coming-soon" },
+  { carpeta: "beginner-html-site-styled", preview: null },
 ];
 
 const repo = "https://github.com/CristianRoa33/frontend-mentor-challenges/tree/main";
@@ -22,18 +22,29 @@ function formatearNombre(carpeta) {
     .join(" ");
 }
 
+function crearImagen(reto) {
+  const nombre = formatearNombre(reto.carpeta);
+
+  if (reto.preview === null) {
+    return `<div class="sin-preview">${nombre}</div>`;
+  }
+
+  const ruta = reto.preview ?? "preview.jpg";
+  return `<img src="${reto.carpeta}/${ruta}" alt="Vista previa de ${nombre}" loading="lazy" />`;
+}
+
 const galeria = document.getElementById("galeria");
 
 galeria.innerHTML = retos
   .map(
-    (carpeta) => `
+    (reto) => `
     <article class="card">
-      <img src="${carpeta}/preview.jpg" alt="Vista previa de ${formatearNombre(carpeta)}" loading="lazy" />
+      ${crearImagen(reto)}
       <div class="card-body">
-        <h2>${formatearNombre(carpeta)}</h2>
+        <h2>${formatearNombre(reto.carpeta)}</h2>
         <div class="botones">
-          <a class="btn-demo" href="${carpeta}/index.html" target="_blank">Ver demo</a>
-          <a class="btn-codigo" href="${repo}/${carpeta}" target="_blank">Ver código</a>
+          <a class="btn-demo" href="${reto.carpeta}/index.html" target="_blank">Ver demo</a>
+          <a class="btn-codigo" href="${repo}/${reto.carpeta}" target="_blank">Ver código</a>
         </div>
       </div>
     </article>
